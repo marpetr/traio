@@ -2,6 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
+    <base href="/index.html">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -32,15 +33,16 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">traio</a>
+            <a class="navbar-brand" href="/"><img src="images/logo-small.png" style="height: 40px; margin: -10px; margin-right: 0" /></a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="HeaderCtrl">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li ng-class="{ active: isActive('/') }"><a href="/">Pradžia</a></li>
+              <li ng-class="{ active: isActive('/learn') }"><a ng-href="/learn">Kursas</a></li>
+              <li ng-class="{ active: isActive('/archive') }"><a ng-href="/archive">Uždavinių archyvas</a></li>
+              <li><a ng-href="/task/foo">foo</a></li>
             </ul>
           </div>
         </div>
@@ -49,12 +51,6 @@
 
     <div class="container">
     <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div>
 
 
@@ -72,6 +68,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -80,13 +77,18 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-ace/ui-ace.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/data.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/controllers/task.js"></script>
+        <script src="scripts/controllers/archive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

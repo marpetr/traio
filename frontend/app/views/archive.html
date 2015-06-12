@@ -1,0 +1,21 @@
+<script type="text/ng-template" id="itemTemplate">
+<ul ng-if="item.items">
+<li ng-repeat="item in item.items" ng-controller="PathBuilderCtrl">
+<div ng-if="item.items">
+  {{item.name}}
+  <ng-include src="'itemTemplate'" />
+</div>
+<a ng-href="{{getCurrentTaskPath(partialPath)}}" ng-if="!item.items">{{item.name}}</a>
+</li>
+</ul>
+</script>
+
+
+<h1>Uždavinių archyvas</h1>
+
+<div ng-controller="PathBuilderCtrl">
+<div ng-repeat="item in tasks.items" ng-controller="PathBuilderCtrl">
+<h3>{{item.name}}</h3>
+<ng-include src="'itemTemplate'" />
+</div>
+</div>

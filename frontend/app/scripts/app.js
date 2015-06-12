@@ -15,17 +15,31 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.ace'
   ])
+  .config(function($locationProvider) {
+    $locationProvider
+      .html5Mode(true)
+      .hashPrefix('!');
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
+      .when('/learn', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/archive', {
+        templateUrl: 'views/archive.html',
+        controller: 'ArchiveCtrl'
+      })
+      .when('/task/:path*', {
+        templateUrl: 'views/task.html',
+        controller: 'TaskCtrl'
       })
       .otherwise({
         redirectTo: '/'
