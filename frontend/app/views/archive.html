@@ -5,7 +5,7 @@
   {{item.name}}
   <ng-include src="'itemTemplate'" />
 </div>
-<a ng-href="{{getCurrentTaskPath(partialPath)}}" ng-if="!item.items">{{item.name}}</a>
+<a ng-href="{{getCurrentTaskPath(partialPath)}}" ng-if="!item.items">{{item.name}} ({{item.group}})</a>
 </li>
 </ul>
 </script>

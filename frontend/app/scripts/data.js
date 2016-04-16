@@ -6,46 +6,73 @@ angular.module('traioApp')
       name: 'LMIO',
       path: 'lmio',
       items: [{
-        name: '2014/2015',
-        path: '26',
+        name: '2015/2016',
+        path: '27',
         items: [{
-          name: 'Mokyklos etapas',
-          path: '1et',
+          name: 'Šalies etapas',
+          path: '4et',
           items: [{
-            name: 'Aukcionas',
-            group: 'jau',
-            path: 'aukcionas-jau'
+            name: 'Treniruotė',
+            path: 'd0',
+            items: [{
+              name: 'Suma',
+              group: 'jau/vyr',
+              path: 'suma'
+            }, {
+              name: 'Žaidimas',
+              group: 'jau/vyr',
+              path: 'zaidimas'
+            }]
           }, {
-            name: 'Automobiliai',
-            group: 'vyr',
-            path: 'automobiliai-vyr'
+            name: 'Pirma diena',
+            path: 'd1',
+            items: [{
+              name: 'Robotas',
+              group: 'jau',
+              path: 'robotas-jau'
+            }, {
+              name: 'Robotas',
+              group: 'vyr',
+              path: 'robotas-vyr'
+            }, {
+              name: 'Ralis',
+              group: 'jau/vyr',
+              path: 'ralis'
+            }, {
+              name: 'Skaičiai',
+              group: 'jau',
+              path: 'skaiciai-jau'
+            }, {
+              name: 'Valymas',
+              group: 'vyr',
+              path: 'valymas-vyr'
+            }]
           }, {
-            name: 'Dvejetainiai',
-            group: 'jau',
-            path: 'dvejetainiai-jau'
-          }, {
-            name: 'Dvejetainiai',
-            group: 'vyr',
-            path: 'dvejetainiai-vyr'
-          }, {
-            name: 'Loj. kortelė',
-            group: 'vyr',
-            path: 'loj-kortele-vyr'
-          }, {
-            name: 'Myli nemyli',
-            group: 'jau',
-            path: 'myli-nemyli-jau'
+            name: 'Antra diena',
+            path: 'd2',
+            items: [{
+              name: 'Asteroidai',
+              group: 'vyr',
+              path: 'asteroidai-vyr'
+            }, {
+              name: 'Aukščiai',
+              group: 'jau',
+              path: 'auksciai-jau'
+            }, {
+              name: 'Kortos',
+              group: 'jau/vyr',
+              path: 'kortos'
+            }, {
+              name: 'Stiklas',
+              group: 'jau',
+              path: 'stiklas-jau'
+            }, {
+              name: 'Žodžiai',
+              group: 'vyr',
+              path: 'zodziai-vyr'
+            }]
           }]
         }]
-      }, {
-        name: '2013/2014',
-        path: '25'
       }]
-    }, {
-      name: 'BOI',
-      path: 'boi'
-    }, {
-      name: 'IOI',
-      path: 'ioi'
     }]
   });
