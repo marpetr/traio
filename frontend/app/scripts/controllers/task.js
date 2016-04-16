@@ -12,7 +12,7 @@ angular.module('traioApp')
       }
       var found = false;
       for (var j = 0; j < taskObject.items.length; j++) {
-        if (taskObject.items[j].path == parts[i]) {
+        if (taskObject.items[j].path === parts[i]) {
           taskObject = taskObject.items[j];
           found = true;
           break;
