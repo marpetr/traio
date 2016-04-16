@@ -5,7 +5,9 @@ version 0.11.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+1) `host$ vagrant up`
+2) `host$ vagrant ssh`
+3) `vagrant$ /vagrant/node_modules/.bin/grunt serve`
 
 ## Testing
 
