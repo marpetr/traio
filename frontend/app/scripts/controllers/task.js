@@ -25,6 +25,6 @@ angular.module('traioApp')
     }
     $scope.taskObject = taskObject;
     $scope.taskPdfPath = '/pdfjs/web/viewer.html?file=' +
-      '/tasks/lmio-2016-4et-sal-' + taskObject.path +
-      '.pdf#locale=lt&amp;zoom=page-width';
+      encodeURIComponent('/tasks/lmio-2016-4et-sal-' + taskObject.path + '.pdf') +
+      '#locale=lt&zoom=page-width';
   });
